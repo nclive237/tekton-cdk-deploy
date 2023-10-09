@@ -19,25 +19,19 @@ export class AppStack extends cdk.Stack {
       removalPolicy: RemovalPolicy.DESTROY,
     });
 
-    // Create an ACM certificate
-    const certificate = new acm.Certificate(this, 'MyCertificate', {
-      domainName: 'acuityclive.com', // Replace with your domain name
-      validation: acm.CertificateValidation.fromDns(), // Perform DNS validation
-    });
+    // // Create an ACM certificate
+    // const certificate = new acm.Certificate(this, 'MyCertificate', {
+    //   domainName: 'acuityclive.com', // Replace with your domain name
+    //   validation: acm.CertificateValidation.fromDns(), // Perform DNS validation
+    // });
 
-    // Define a policy statement to allow ACM certificate validation
-    const certValidationPolicy = new iam.PolicyStatement({
-      effect: iam.Effect.ALLOW,
-      actions: ['acm:DescribeCertificate', 'acm:ResendValidationEmail', 'acm:GetCertificate'],
-      resources: [certificate.certificateArn],
-    });
+    // // Define a policy statement to allow ACM certificate validation
+    // const certValidationPolicy = new iam.PolicyStatement({
+    //   effect: iam.Effect.ALLOW,
+    //   actions: ['acm:DescribeCertificate', 'acm:ResendValidationEmail', 'acm:GetCertificate'],
+    //   resources: [certificate.certificateArn],
+    // });
 
   }
-
-
-
-    // new cdk.CfnOutput(this, 'albDNS', {
-    //   value: alb.loadBalancerDnsName,
-    // });
     
 }
