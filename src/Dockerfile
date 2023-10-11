@@ -1,7 +1,9 @@
 FROM node:14
 
 # Install AWS CDK
-RUN npm install -g aws-cdk typescript ts-node
+# RUN npm install -g aws-cdk typescript ts-node
+
+RUN npm install -g aws-cdk-lib
 
 # Copy the CDK app code to the container
 COPY ./app /app
