@@ -7,7 +7,7 @@ WORKDIR /app
 
 # Install AWS CDK
 # RUN npm install -g aws-cdk typescript ts-node aws-cdk-lib
-RUN npm install package.json
+RUN npm install -g package.json
 
 # Build the CDK app
 RUN cdk synth
