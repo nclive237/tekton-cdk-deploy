@@ -1,4 +1,4 @@
-FROM node:lts
+FROM node:lts-alpine
 
 # Copy the CDK app code to the container
 COPY ./app /app
